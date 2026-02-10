@@ -1,5 +1,8 @@
-import { Card, CardActionArea, CardActions, CardContent, Typography, CardMedia } from "@mui/material";
+import { Card, CardActionArea, CardActions, CardContent, Typography, CardMedia, IconButton } from "@mui/material";
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export interface Product {
     name: string;
@@ -10,11 +13,16 @@ export interface Product {
 
 export const CardItem = ({ name, description, price, imagePath }: Product) => {
     const navigate = useNavigate();
+    const [favorite, setToFavorite] = useState(false);
 
     const handleClick = () => {
         if (name === "Wireless Headphones") {
             navigate("/wireless-headphones");
         }
+    };
+
+    const addToFavorite = () => {
+        setToFavorite(prev => !prev);
     };
 
     return (
@@ -41,6 +49,10 @@ export const CardItem = ({ name, description, price, imagePath }: Product) => {
                 <Typography>
                     {price}
                 </Typography>
+                <IconButton onClick={addToFavorite} disableRipple>
+                    { /* ternary and useState */}
+                    {favorite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+                </IconButton>
             </CardActions>
         </Card>
     );
