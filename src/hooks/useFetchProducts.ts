@@ -5,10 +5,12 @@ export const useFetchProducts = () => {
 
     const [products, setProducts] = useState<Product[]>([]);
 
+    const PRODUCTS_URL = "http://localhost:3000/products";
+
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch("http://localhost:3000/products");
+                const response = await fetch(PRODUCTS_URL);
                 const data = await response.json();
 
                 setProducts(data);
