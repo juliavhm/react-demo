@@ -11,12 +11,14 @@ export const ProductPage = () => {
                 </Typography>
             </Grid>
 
+            { /* conditional rendering and map */ }
             <Grid container spacing={8}>
                 {products.map((product) => (
-                    <Grid key={product.name}>
-                        <CardItem name={product.name} description={product.description} price={product.price} imagePath={product.imagePath} />
-                    </Grid>
-                ))}
+                    product.imagePath && product.name && product.description && (
+                        <Grid key={product.name}>
+                            <CardItem name={product.name} description={product.description} price={product.price} imagePath={product.imagePath} />
+                        </Grid>
+                )))}
             </Grid>
         </Grid>
 
