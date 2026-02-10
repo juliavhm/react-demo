@@ -71,3 +71,14 @@ export default defineConfig([
   },
 ])
 ```
+## Json-server
+
+- Run npx json-server db.json to start server.
+
+### Endpoints
+
+- GET    http://localhost:3000/products
+- GET    http://localhost:3000/products/:id
+- POST   http://localhost:3000/products
+- PUT    http://localhost:3000/products/:id
+- DELETE http://localhost:3000/products/:id

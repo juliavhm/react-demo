@@ -1,0 +1,28 @@
+{
+    "products": [
+        {
+            "name": "Wireless Headphones",
+            "description": "High-quality wireless headphones with noise cancellation.",
+            "price": 500.99,
+            "imagePath": "https://m.media-amazon.com/images/I/61UgZSYRllL._AC_SL1500_.jpg"
+        },
+        {
+            "name": "Smart Watch",
+            "description": "Modern smart watch with health and fitness tracking.",
+            "price": 300.99,
+            "imagePath": "https://m.media-amazon.com/images/I/41H4AoY5xbL._AC_SL1000_.jpg"
+        },
+        {
+            "name": "Stanley",
+            "description": "Thanks to Stanley's vacuum insulation, your water stays cold for 11 hours and 2 days with ice.",
+            "price": 59.99,
+            "imagePath": "https://gazin-images.gazin.com.br/1bQfIUyEZIf8Tq4lYBt2lHApt70=/1920x/filters:format(webp):quality(75)/https://gazin-marketplace.s3.amazonaws.com/midias/imagens/2024/08/copo-termico-stanley-quencher-aco-inox-887ml-com-canudo-162408191950.jpg"
+        },
+        {
+            "name": "",
+            "description": "",
+            "price": 0,
+            "imagePath": ""
+        }
+    ]
+}

@@ -2,14 +2,8 @@ import { Card, CardActionArea, CardActions, CardContent, Typography, CardMedia, 
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-
-export interface Product {
-    name: string;
-    description: string;
-    price: number;
-    imagePath: string;
-}
+import {  useState } from "react";
+import type { Product } from "../types";
 
 export const CardItem = ({ name, description, price, imagePath }: Product) => {
     const navigate = useNavigate();

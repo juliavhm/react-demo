@@ -1,11 +1,13 @@
 import { Box, Typography, Button } from "@mui/material"
 import { useNavigate } from "react-router-dom"
 import { useCart } from "../context/CartContext"
-import products from "../data/products.json"
+import { useFetchProducts } from "../hooks/useFetchProducts"
 
 export const WirelessHeadphonesPage = () => {
     const navigate = useNavigate()
     const { addToCart, removeFromCart } = useCart()
+    const products = useFetchProducts();
+
     const product = products.find(p => p.name === "Wireless Headphones")
 
     if (!product) return null

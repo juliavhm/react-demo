@@ -1,8 +1,11 @@
 import { Grid, Typography } from "@mui/material"
 import { CardItem } from "../components/Card"
-import products from "../data/products.json";
+import { useFetchProducts } from "../hooks/useFetchProducts"
 
 export const ProductPage = () => {
+
+    const products = useFetchProducts();
+
     return (
         <Grid container direction="column" spacing={8} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
             <Grid>
