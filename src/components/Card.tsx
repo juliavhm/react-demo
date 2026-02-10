@@ -1,4 +1,5 @@
 import { Card, CardActionArea, CardActions, CardContent, Typography, CardMedia } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export interface Product {
     name: string;
@@ -8,9 +9,17 @@ export interface Product {
 }
 
 export const CardItem = ({ name, description, price, imagePath }: Product) => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        if (name === "Wireless Headphones") {
+            navigate("/wireless-headphones");
+        }
+    };
+
     return (
         <Card sx={{ maxWidth: 345 }}>
-            <CardActionArea>
+            <CardActionArea onClick={handleClick}>
                 <CardMedia
                     sx={{
                         aspectRatio: "1 / 1",
