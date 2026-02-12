@@ -18,8 +18,8 @@ export const ProductPage = () => {
             <Grid container spacing={8}>
                 {products.map((product) => (
                     product.imagePath && product.name && product.description && (
-                        <Grid key={product.name}>
-                            <CardItem name={product.name} description={product.description} price={product.price} imagePath={product.imagePath} />
+                        <Grid key={product.id}>
+                            <CardItem id={product.id} name={product.name} description={product.description} price={product.price} imagePath={product.imagePath} />
                         </Grid>
                 )))}
             </Grid>

@@ -5,13 +5,13 @@ import { useNavigate } from "react-router-dom";
 import {  useState } from "react";
 import type { Product } from "../types";
 
-export const CardItem = ({ name, description, price, imagePath }: Product) => {
+export const CardItem = ({ id, name, description, price, imagePath }: Product) => {
     const navigate = useNavigate();
     const [favorite, setToFavorite] = useState(false);
 
     const handleClick = () => {
-        if (name === "Wireless Headphones") {
-            navigate("/wireless-headphones");
+        if (id) {
+            navigate(`/product/${id}`);
         }
     };
 
