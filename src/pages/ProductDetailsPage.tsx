@@ -1,4 +1,4 @@
-import { Box, Typography, Button, CircularProgress, Alert } from "@mui/material"
+import { Box, Typography, Button, CircularProgress, Alert, CardMedia } from "@mui/material"
 import { useNavigate, useParams } from "react-router-dom"
 import { useCart } from "../context/CartContext"
 import { useProductById } from "../hooks/useProductById"
@@ -19,22 +19,22 @@ export const ProductDetailsPage = () => {
     }
 
     return (
-        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4, p: 4 }}>
-            <Typography variant="h2">{product?.name}</Typography>
-            <Box
+        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4, p: 4, backgroundColor: '#e3f2fd', minHeight: '100vh'}}>
+            <Typography variant="h2" color="text.secondary">{product?.name}</Typography>
+            <CardMedia
                 component="img"
                 src={product?.imagePath}
                 alt={product?.name}
-                sx={{ maxWidth: 500, width: "100%", borderRadius: 2 }}
+                sx={{ width: "100%", borderRadius: 2, maxWidth: 400 }}
             />
-            <Typography variant="h6" sx={{ maxWidth: 600, textAlign: "center" }}>
+            <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 600, textAlign: "center"}}>
                 {product?.description}
             </Typography>
-            <Typography variant="h3" fontWeight={600} color="primary">
+            <Typography variant="h4" fontWeight={600} color="primary">
                 ${product?.price}
             </Typography>
             <Box sx={{ display: "flex", gap: 2 }}>
-                <Button variant="contained" onClick={() => navigate("/")}>Go back</Button>
+                <Button variant="outlined" onClick={() => navigate("/")}>Go back</Button>
                 <Button variant="contained" onClick={addToCart}>Add to Cart</Button>
                 <Button variant="contained" color="error" onClick={removeFromCart}>Remove from Cart</Button>
             </Box>

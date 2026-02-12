@@ -1,8 +1,9 @@
-import { Card, CardActionArea, CardActions, CardContent, Typography, CardMedia, IconButton } from "@mui/material";
+import { Card, CardActionArea, CardActions, CardContent, Typography, CardMedia } from "@mui/material";
+import Button from '@mui/material/Button';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useNavigate } from "react-router-dom";
-import {  useState } from "react";
+import { useState } from "react";
 import type { Product } from "../types";
 
 export const CardItem = ({ id, name, description, price, imagePath }: Product) => {
@@ -43,11 +44,12 @@ export const CardItem = ({ id, name, description, price, imagePath }: Product) =
                 <Typography>
                     {price}
                 </Typography>
-                <IconButton onClick={addToFavorite} disableRipple>
-                    { /* ternary and useState */}
-                    {favorite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
-                </IconButton>
+                <Button
+                    onClick={addToFavorite}
+                >
+                    {favorite ? <FavoriteIcon sx={{ color: "red" }}  /> : <FavoriteBorderIcon sx={{color: "black" }} />}
+                </Button>
             </CardActions>
-        </Card>
+        </Card >
     );
 }

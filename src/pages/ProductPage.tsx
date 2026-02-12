@@ -9,7 +9,7 @@ export const ProductPage = () => {
     return (
         <Grid container direction="column" spacing={8} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
             <Grid>
-                <Typography variant="h2">
+                <Typography variant="h2" color="text.secondary">
                     Products
                 </Typography>
             </Grid>

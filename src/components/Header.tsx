@@ -6,7 +6,7 @@ export const Header = () => {
     const { cartCount } = useCart();
 
     return (
-        <AppBar style={{backgroundColor: "grey"}}>
+        <AppBar style={{ backgroundColor: "#ffffffee" }}>
             <Toolbar>
                 <IconButton
                     edge="start"
@@ -15,7 +15,7 @@ export const Header = () => {
                     sx={{ mr: 2 }}
                 >
                 </IconButton>
-                <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
+                <Typography variant="h6" color="textPrimary" component="div" sx={{ flexGrow: 1 }}>
                     Demo
                 </Typography>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
@@ -31,7 +31,7 @@ export const Header = () => {
                                 } 
                             }}
                         >
-                            <ShoppingCartIcon sx={{ fontSize: 40 }} />
+                            <ShoppingCartIcon sx={{ fontSize: 40, color: "black"}} />
                         </Badge>
                     </IconButton>
                     <button>Login</button>
